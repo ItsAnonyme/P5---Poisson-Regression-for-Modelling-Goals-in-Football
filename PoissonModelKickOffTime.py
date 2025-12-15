@@ -9,7 +9,7 @@ max_goals = 6
 decay_rate = 0.004
 
 Data = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=0, skipfooter=530, engine='python')
-List = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=range(0, 11944), skipfooter=50, engine="python")
+List = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=range(0, 11944), skipfooter=150, engine="python")
 
 def calculate_weights(dates, x):
     dates = pd.to_datetime(dates, errors="coerce")
@@ -53,7 +53,7 @@ def prediction_poisson(Data, HomeTeam, AwayTeam, x, Time_of_Match):
 def compare_prediction_poisson_once(x):
     temp_poisson, matches = 0, 0
     for i in range(0, len(List)):
-        Data = pd.read_csv("premier_league_all_seasons_cleaned_testfile.csv", skiprows=0, skipfooter=430 - i,
+        Data = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=0, skipfooter=530 - i,
                                engine='python')
         if List.iloc[i, 8] in Data.Time:
             if prediction_poisson(Data, List.iloc[i, 1], List.iloc[i, 2], x, List.iloc[i, 8]) == List.iloc[i, 5]:
@@ -66,4 +66,5 @@ def compare_prediction_poisson_once(x):
 
 if __name__ == "__main__":
     compare_prediction_poisson_once(decay_rate)
+
 
