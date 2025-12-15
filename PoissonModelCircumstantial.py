@@ -12,7 +12,7 @@ lower_bound_sum = 0
 lower_bound_individual = 750
 accuracy_bound = 0.6
 
-Data = pd.read_csv("premier_league_all_seasons_cleaned_test.csv")
+Data = pd.read_csv("Premier_League_All_Seasons.csv")
 
 Data["Date"] = pd.to_datetime(Data["Date"], errors="coerce")
 Data = Data.sort_values("Date")
