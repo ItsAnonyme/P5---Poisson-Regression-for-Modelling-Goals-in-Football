@@ -8,9 +8,8 @@ from decimal import Decimal
 max_goals = 6
 decay_rate = 0.004
 
-# Where we get our data
-Data = pd.read_csv("premier_league_all_seasons_cleaned_test.csv", skiprows=0, skipfooter=530, engine='python')
-List = pd.read_csv("premier_league_all_seasons_cleaned_testfile.csv", skiprows=range(0, 11944), skipfooter=50, engine="python")
+Data = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=0, skipfooter=530, engine='python')
+List = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=range(0, 11944), skipfooter=50, engine="python")
 
 def calculate_weights(dates, x):
     dates = pd.to_datetime(dates, errors="coerce")
@@ -67,3 +66,4 @@ def compare_prediction_poisson_once(x):
 
 if __name__ == "__main__":
     compare_prediction_poisson_once(decay_rate)
+
