@@ -7,8 +7,8 @@ from decimal import Decimal
 
 max_goals = 6
 
-Data = pd.read_csv("premier_league_all_seasons_cleaned_testfile.csv", skiprows=0, skipfooter=430, engine='python')
-List = pd.read_csv("premier_league_all_seasons_cleaned_testfile.csv", skiprows=range(0, 11944), skipfooter=50, engine="python")
+Data = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=0, skipfooter=430, engine='python')
+List = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=range(0, 11944), skipfooter=50, engine="python")
 
 home_df = pd.DataFrame(
     data={"team": Data.HomeTeam, "opponent": Data.AwayTeam, "goals": Data.FTHG, "home": 1})
