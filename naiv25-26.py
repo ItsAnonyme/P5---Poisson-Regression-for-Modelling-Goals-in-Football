@@ -1,7 +1,7 @@
 import pandas as pd
 from tabulate import tabulate
 
-data = pd.read_csv("C:/Users/75tho/P5/PythonKode/Premier League All Seasons.csv")
+data = pd.read_csv("Premier_League_All_Seasons.csv")
 Team = {"Liverpool": 1, "Arsenal": 2,
 "Man City": 3,
 "Chelsea": 4,
@@ -60,4 +60,5 @@ print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
         
         
         
+
 
