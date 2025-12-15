@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from tabulate import tabulate
 
-data = pd.read_csv("C:/Users/75tho/P5/PythonKode/premier_league_all_seasons_cleaned_testfile.csv")
+data = pd.read_csv("Premier_League_All_Seasons.csv")
 Team = {"Man City": 1, "Arsenal": 2,
 "Man United": 3,
 "Newcastle": 4,
@@ -70,3 +70,4 @@ print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
         
         
         
+
