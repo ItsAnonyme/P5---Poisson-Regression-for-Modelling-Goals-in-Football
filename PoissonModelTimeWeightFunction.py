@@ -7,7 +7,7 @@ from collections import Counter
 
 max_goals = 6
 decay_rate = 0.004
-accuracy_bound = 0.8
+accuracy_bound = 0.6
 lower_bound_sum = 0
 lower_bound_individual = 0
 
@@ -98,3 +98,4 @@ def compare_prediction_poisson_once():
 
 if __name__ == "__main__":
     compare_prediction_poisson_once()
+
