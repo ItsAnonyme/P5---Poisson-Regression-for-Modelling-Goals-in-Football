@@ -9,8 +9,8 @@ HomeTeam = "Man United"
 AwayTeam = "Liverpool"
 
 # Where we get our data
-Data = pd.read_csv("premier_league_all_seasons_cleaned_updated.csv",skipfooter=430,engine='python')
-List = pd.read_csv("premier_league_all_seasons_cleaned_updated.csv",skiprows=range(1,11944),skipfooter=50,engine='python')
+Data = pd.read_csv("Premier_League_All_Seasons.csv",skipfooter=430,engine='python')
+List = pd.read_csv("Premier_League_All_Seasons.csv",skiprows=range(1,11944),skipfooter=50,engine='python')
 
 def calculate_weights(dates, x):
     dates = pd.to_datetime(dates, errors='coerce')
