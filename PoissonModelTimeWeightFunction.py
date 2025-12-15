@@ -11,8 +11,8 @@ accuracy_bound = 0.8
 lower_bound_sum = 0
 lower_bound_individual = 0
 
-Data = pd.read_csv("premier_league_all_seasons_cleaned_test.csv", skiprows=0, skipfooter=150, engine='python')
-List = pd.read_csv("premier_league_all_seasons_cleaned_test.csv", skiprows=range(0, 12324), skipfooter=0, engine="python")
+Data = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=0, skipfooter=150, engine='python')
+List = pd.read_csv("Premier_League_All_Seasons.csv", skiprows=range(0, 12324), skipfooter=0, engine="python")
 
 home_df = pd.DataFrame(
     data={"team": Data.HomeTeam, "opponent": Data.AwayTeam, "goals": Data.FTHG, "home": 1, "Date": Data.Date})
